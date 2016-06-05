@@ -1,0 +1,490 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18327,        481]
+NotebookOptionsPosition[     17775,        458]
+NotebookOutlinePosition[     18270,        478]
+CellTagsIndexPosition[     18227,        475]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Problem", " ", "3"}], ",", " ", "Plots"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"BC", "'"}], 
+      RowBox[{"s", ":", " ", 
+       RowBox[{"x", "[", "0", "]"}]}]}], "=", "1"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "'"}], "[", "0", "]"}], "=", "0"}], ",", " ", 
+    RowBox[{"A", "=", "1"}], ",", " ", 
+    RowBox[{"B", "=", "0"}], ",", " ", 
+    RowBox[{"C", "=", 
+     RowBox[{
+      RowBox[{"-", "3"}], "/", "8"}]}], ",", " ", 
+    RowBox[{"D", "=", "1"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x01", "=", 
+     RowBox[{"Cos", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"x02", "=", 
+     RowBox[{"x01", "+", 
+      RowBox[{"\[Epsilon]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Cos", "[", "t", "]"}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "/", "2"}], ")"}], "t", "*", 
+          RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "/", "2"}], ")"}], "*", 
+          RowBox[{"Sin", "[", "t", "]"}]}]}], ")"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"x03", "=", 
+     RowBox[{"x02", "+", 
+      RowBox[{
+       SuperscriptBox["\[Epsilon]", "2"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Cos", "[", "t", "]"}], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "/", "4"}], ")"}], "t"}], "+", "1", "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "/", "8"}], ")"}], "t"}]}], ")"}]}], "+", 
+         RowBox[{
+          RowBox[{"Sin", "[", "t", "]"}], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "/", "8"}], ")"}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "/", "2"}], ")"}], "t"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "/", "8"}], ")"}], 
+             RowBox[{"(", 
+              SuperscriptBox["t", "2"], ")"}]}]}], ")"}]}]}], ")"}]}]}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "''"}], "[", "t", "]"}], "+", 
+         RowBox[{"\[Epsilon]", "*", 
+          RowBox[{
+           RowBox[{"x", "'"}], "[", "t", "]"}]}], "+", 
+         RowBox[{"x", "[", "t", "]"}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{"x", "[", "0", "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+     RowBox[{"x", "[", "t", "]"}], ",", "t"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Cos", "[", "t", "]"}], ",", 
+         RowBox[{
+          RowBox[{"Cos", "[", "t", "]"}], "+", 
+          RowBox[{"\[Epsilon]", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Cos", "[", "t", "]"}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "/", "2"}], ")"}], "t", "*", 
+              RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "/", "2"}], ")"}], "*", 
+              RowBox[{"Sin", "[", "t", "]"}]}]}], ")"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"Cos", "[", "t", "]"}], "+", 
+          RowBox[{"\[Epsilon]", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Cos", "[", "t", "]"}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "/", "2"}], ")"}], "t", "*", 
+              RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "/", "2"}], ")"}], "*", 
+              RowBox[{"Sin", "[", "t", "]"}]}]}], ")"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["\[Epsilon]", "2"], 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Cos", "[", "t", "]"}], 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "/", "4"}], ")"}], "t"}], "+", "1", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "/", "8"}], ")"}], "t"}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"Sin", "[", "t", "]"}], 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "3"}], "/", "8"}], ")"}], "-", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "/", "2"}], ")"}], "t"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "/", "8"}], ")"}], 
+                 RowBox[{"(", 
+                  SuperscriptBox["t", "2"], ")"}]}]}], ")"}]}]}], ")"}]}]}], 
+         ",", 
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               FractionBox["1", "2"], " ", "t", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "\[Epsilon]"}], "-", 
+                 SqrtBox[
+                  RowBox[{
+                   RowBox[{"-", "4"}], "+", 
+                   SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]]}], " ", 
+            "\[Epsilon]"}], "+", 
+           RowBox[{
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              FractionBox["1", "2"], " ", "t", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "\[Epsilon]"}], "+", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", 
+                  SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]], " ", 
+            "\[Epsilon]"}], "+", 
+           RowBox[{
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              FractionBox["1", "2"], " ", "t", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "\[Epsilon]"}], "-", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", 
+                  SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]], " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{"-", "4"}], "+", 
+              SuperscriptBox["\[Epsilon]", "2"]}]]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              FractionBox["1", "2"], " ", "t", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "\[Epsilon]"}], "+", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", 
+                  SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]], " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{"-", "4"}], "+", 
+              SuperscriptBox["\[Epsilon]", "2"]}]]}]}], 
+          RowBox[{"2", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{"-", "4"}], "+", 
+             SuperscriptBox["\[Epsilon]", "2"]}]]}]]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+       RowBox[{"PlotLegends", "\[Rule]", "\"\<Expressions\>\""}]}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "0.001", ",", "1"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.6553967026841607`*^9, 3.655397102883025*^9}, {
+   3.6553971333693776`*^9, 3.6553972090555735`*^9}, 3.6553972546361275`*^9, 
+   3.6553973837235413`*^9, {3.6553975131582465`*^9, 3.6553975164333267`*^9}, {
+   3.655397574237964*^9, 3.6553975767890577`*^9}, {3.6553982620916543`*^9, 
+   3.6553984311156282`*^9}, {3.6553985683249645`*^9, 
+   3.6553987156409664`*^9}, {3.6553988616791945`*^9, 3.655398923646189*^9}, {
+   3.655398953800189*^9, 3.655399036291044*^9}, {3.6553993532558765`*^9, 
+   3.6553993557475815`*^9}, {3.655403429931342*^9, 3.655403633976172*^9}, {
+   3.6554036649989014`*^9, 3.6554037265511084`*^9}, {3.6554039090849185`*^9, 
+   3.6554039346104865`*^9}, {3.6554043290898094`*^9, 
+   3.6554043299337854`*^9}, {3.6554050033944063`*^9, 3.655405091747608*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "t", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "\[Epsilon]"}], "-", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{"-", "4"}], "+", 
+              SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]]}], " ", 
+       "\[Epsilon]"}], "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "t", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Epsilon]"}], "+", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{"-", "4"}], "+", 
+             SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]], " ", 
+       "\[Epsilon]"}], "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "t", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Epsilon]"}], "-", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{"-", "4"}], "+", 
+             SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]], " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"-", "4"}], "+", 
+         SuperscriptBox["\[Epsilon]", "2"]}]]}], "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "t", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Epsilon]"}], "+", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{"-", "4"}], "+", 
+             SuperscriptBox["\[Epsilon]", "2"]}]]}], ")"}]}]], " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"-", "4"}], "+", 
+         SuperscriptBox["\[Epsilon]", "2"]}]]}]}], 
+     RowBox[{"2", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"-", "4"}], "+", 
+        SuperscriptBox["\[Epsilon]", "2"]}]]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6554036717107983`*^9, 3.6554037279022865`*^9, 3.6554039362819695`*^9, 
+   3.6554043310426617`*^9, {3.655405004211252*^9, 3.655405049557455*^9}, 
+   3.6554050834522915`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Epsilon]$$ = 0.064, Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Epsilon]$$], 0.001, 1}}, Typeset`size$$ = {
+    573., {112., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Epsilon]$119655$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Epsilon]$$ = 0.001}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Epsilon]$$, $CellContext`\[Epsilon]$119655$$, 0]},
+       "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         Cos[$CellContext`t], 
+         Cos[$CellContext`t] + $CellContext`\[Epsilon]$$ (
+           Cos[$CellContext`t] - ((1/2) $CellContext`t) 
+           Cos[$CellContext`t] + (1/2) Sin[$CellContext`t]), 
+         Cos[$CellContext`t] + $CellContext`\[Epsilon]$$ (
+           Cos[$CellContext`t] - ((1/2) $CellContext`t) 
+           Cos[$CellContext`t] + (1/2) 
+            Sin[$CellContext`t]) + $CellContext`\[Epsilon]$$^2 (
+           Cos[$CellContext`t] ((1/4) $CellContext`t + 
+             1 + (1/8) $CellContext`t) + 
+           Sin[$CellContext`t] ((-3)/8 - (1/
+              2) $CellContext`t + (1/8) $CellContext`t^2)), ((-
+            E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ - 
+               Sqrt[-4 + $CellContext`\[Epsilon]$$^2]))) $CellContext`\
+\[Epsilon]$$ + 
+          E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ + 
+              Sqrt[-4 + $CellContext`\[Epsilon]$$^2])) \
+$CellContext`\[Epsilon]$$ + 
+          E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ - 
+              Sqrt[-4 + $CellContext`\[Epsilon]$$^2])) 
+           Sqrt[-4 + $CellContext`\[Epsilon]$$^2] + 
+          E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ + 
+              Sqrt[-4 + $CellContext`\[Epsilon]$$^2])) 
+           Sqrt[-4 + $CellContext`\[Epsilon]$$^2])/(2 
+         Sqrt[-4 + $CellContext`\[Epsilon]$$^2])}, {$CellContext`t, 0, 1}, 
+        PlotLegends -> "Expressions"], 
+      "Specifications" :> {{$CellContext`\[Epsilon]$$, 0.001, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{624., {158., 165.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{{3.655405139614316*^9, 3.655405203496028*^9}, {
+  3.655506546884192*^9, 3.6555066214123545`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Epsilon]$$ = 0.402, Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Epsilon]$$], 0.001, 1}}, Typeset`size$$ = {
+    573., {114., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Epsilon]$119655$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Epsilon]$$ = 0.001}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Epsilon]$$, $CellContext`\[Epsilon]$119655$$, 0]},
+       "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         Cos[$CellContext`t], 
+         Cos[$CellContext`t] + $CellContext`\[Epsilon]$$ (
+           Cos[$CellContext`t] - ((1/2) $CellContext`t) 
+           Cos[$CellContext`t] + (1/2) Sin[$CellContext`t]), 
+         Cos[$CellContext`t] + $CellContext`\[Epsilon]$$ (
+           Cos[$CellContext`t] - ((1/2) $CellContext`t) 
+           Cos[$CellContext`t] + (1/2) 
+            Sin[$CellContext`t]) + $CellContext`\[Epsilon]$$^2 (
+           Cos[$CellContext`t] ((1/4) $CellContext`t + 
+             1 + (1/8) $CellContext`t) + 
+           Sin[$CellContext`t] ((-3)/8 - (1/
+              2) $CellContext`t + (1/8) $CellContext`t^2)), ((-
+            E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ - 
+               Sqrt[-4 + $CellContext`\[Epsilon]$$^2]))) $CellContext`\
+\[Epsilon]$$ + 
+          E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ + 
+              Sqrt[-4 + $CellContext`\[Epsilon]$$^2])) \
+$CellContext`\[Epsilon]$$ + 
+          E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ - 
+              Sqrt[-4 + $CellContext`\[Epsilon]$$^2])) 
+           Sqrt[-4 + $CellContext`\[Epsilon]$$^2] + 
+          E^(((1/2) $CellContext`t) (-$CellContext`\[Epsilon]$$ + 
+              Sqrt[-4 + $CellContext`\[Epsilon]$$^2])) 
+           Sqrt[-4 + $CellContext`\[Epsilon]$$^2])/(2 
+         Sqrt[-4 + $CellContext`\[Epsilon]$$^2])}, {$CellContext`t, 0, 1}, 
+        PlotLegends -> "Expressions"], 
+      "Specifications" :> {{$CellContext`\[Epsilon]$$, 0.001, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{624., {159., 166.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{{3.655405139614316*^9, 3.655405203496028*^9}, {
+  3.6555066356582155`*^9, 3.6555066669135313`*^9}}]
+},
+WindowSize->{1920, 1007},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 8697, 239, 309, "Input"],
+Cell[9280, 263, 2265, 70, 74, "Output"]
+}, Open  ]],
+Cell[11560, 336, 3103, 59, 340, "Input"],
+Cell[14666, 397, 3105, 59, 342, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

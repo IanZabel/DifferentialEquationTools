@@ -1,0 +1,229 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8681,        220]
+NotebookOptionsPosition[      8212,        199]
+NotebookOutlinePosition[      8707,        219]
+CellTagsIndexPosition[      8664,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["Y", "ex"], "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"(", 
+        RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"-", 
+           FractionBox["1", "\[Epsilon]"]}]]}], ")"}]], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"-", 
+          FractionBox["x", "\[Epsilon]"]}]]}], ")"}]}], "+", 
+     RowBox[{"\[Alpha]", " ", "x"}]}], ")"}]}], ";", 
+  RowBox[{
+   SubscriptBox["Y", "co"], "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"-", 
+          FractionBox["x", "\[Epsilon]"]}]]}], ")"}]}], "+", 
+     RowBox[{"\[Alpha]", " ", "x"}]}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          FractionBox[
+           RowBox[{"(", 
+            RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"-", 
+               FractionBox["1", "\[Epsilon]"]}]]}], ")"}]], 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{"-", 
+              FractionBox["x", "\[Epsilon]"]}]]}], ")"}]}], "+", 
+         RowBox[{"\[Alpha]", " ", "x"}]}], ")"}], ",", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Alpha]"}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{"-", 
+              FractionBox["x", "\[Epsilon]"]}]]}], ")"}]}], "+", 
+         RowBox[{"\[Alpha]", " ", "x"}]}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"Filling", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1", "\[Rule]", 
+        RowBox[{"{", "2", "}"}]}], "}"}]}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"Placed", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<Exact\>\"", ",", "\"\<Composite\>\""}], "}"}], ",", 
+        "Above"}], "]"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], ",", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", 
+      "\"\<Variable \[Epsilon] (0.001 to 1) and \[Alpha] (0 to 1)\>\""}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Epsilon]", ",", "0.001", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.655595100269621*^9, 3.6555951332942915`*^9}, {
+   3.655595689609021*^9, 3.655595714140817*^9}, {3.6555962824798055`*^9, 
+   3.655596295655403*^9}, {3.6555963280137863`*^9, 3.655596342655511*^9}, {
+   3.6555965043487463`*^9, 3.655596564650179*^9}, {3.65559659806351*^9, 
+   3.6555966025420866`*^9}, {3.6555967486084323`*^9, 3.655596798100894*^9}, {
+   3.655596868687628*^9, 3.6555968849704676`*^9}, {3.655658282072115*^9, 
+   3.6556585127753077`*^9}, {3.655658593226184*^9, 3.655658690467416*^9}, {
+   3.6556587263485193`*^9, 3.6556588552239647`*^9}, {3.655658886220275*^9, 
+   3.6556589138145275`*^9}, {3.6556645442234573`*^9, 
+   3.6556646960416784`*^9}, {3.6556647270374956`*^9, 
+   3.6556647642888374`*^9}, {3.6556648087164636`*^9, 3.655664834067131*^9}, {
+   3.6556648677358875`*^9, 3.655665191816902*^9}, {3.6556652391387568`*^9, 
+   3.655665293444293*^9}, {3.655665328604765*^9, 3.6556656118304605`*^9}, {
+   3.6556656574090996`*^9, 3.655666544307923*^9}, 3.655686286265774*^9, {
+   3.655686337657531*^9, 3.6556863768188996`*^9}, {3.6556868401275425`*^9, 
+   3.6556869909418955`*^9}, {3.6556870662103124`*^9, 
+   3.6556870813324537`*^9}, {3.6556871193994827`*^9, 
+   3.6556871760336514`*^9}, {3.6556872136665554`*^9, 
+   3.6556873731345406`*^9}, {3.6556876593685737`*^9, 3.655687715769659*^9}, {
+   3.6560160794026823`*^9, 3.6560162983184676`*^9}, {3.656016374750317*^9, 
+   3.656016398522539*^9}, {3.656016437244214*^9, 3.6560164377757177`*^9}, {
+   3.656016485400138*^9, 3.656016490893901*^9}, {3.656016528442525*^9, 
+   3.656016542509771*^9}, {3.656025042065024*^9, 3.6560250707641973`*^9}, 
+   3.656025337948434*^9, {3.656025386925485*^9, 3.656025390613003*^9}, {
+   3.6560254838387027`*^9, 3.6560255159209375`*^9}, {3.6560256458293858`*^9, 
+   3.656025677608611*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Alpha]$$ = 
+    0.6920000000000001, $CellContext`\[Epsilon]$$ = 0.836, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Alpha]$$], 0, 1}, {
+      Hold[$CellContext`\[Epsilon]$$], 0.001, 1}}, Typeset`size$$ = {
+    360., {125., 159.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Alpha]$32196$$ = 
+    0, $CellContext`\[Epsilon]$32197$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`\[Alpha]$$ = 0, $CellContext`\[Epsilon]$$ = 
+        0.001}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$32196$$, 0], 
+        Hold[$CellContext`\[Epsilon]$$, $CellContext`\[Epsilon]$32197$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1 - $CellContext`\[Alpha]$$)/(1 - 
+           E^(-(1/$CellContext`\[Epsilon]$$)))) (1 - 
+           E^(-($CellContext`x/$CellContext`\[Epsilon]$$))) + $CellContext`\
+\[Alpha]$$ $CellContext`x, (1 - $CellContext`\[Alpha]$$) (1 - 
+           E^(-($CellContext`x/$CellContext`\[Epsilon]$$))) + $CellContext`\
+\[Alpha]$$ $CellContext`x}, {$CellContext`x, 0, 1}, Filling -> {1 -> {2}}, 
+        PlotRange -> {{0, 1}, {0, 1}}, PlotLegends -> 
+        Placed[{"Exact", "Composite"}, Above], 
+        AxesLabel -> {$CellContext`x, $CellContext`y}, PlotLabel -> 
+        "Variable \[Epsilon] (0.001 to 1) and \[Alpha] (0 to 1)"], 
+      "Specifications" :> {{$CellContext`\[Alpha]$$, 0, 
+         1}, {$CellContext`\[Epsilon]$$, 0.001, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {199., 206.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6560253878033743`*^9, 3.6560253917814755`*^9}, 
+   3.656025501802103*^9, {3.6560256558083696`*^9, 3.656025678653824*^9}}]
+}, Open  ]]
+},
+WindowSize->{1920, 1007},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4979, 123, 197, "Input"],
+Cell[5562, 147, 2634, 49, 422, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
